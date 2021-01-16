@@ -12,7 +12,7 @@ public class EndGame : MonoBehaviour
         if (collision.gameObject.tag == "Player")
 
         {
-           Mario.transform.position = new Vector3((float) 1969.7, (float) -2, (float) -10957.9);
+           Mario.transform.position = new Vector3((float) 1693.07, (float) -169.4, (float) -9763.4);
            Mario.transform.rotation = Quaternion.Euler(0, 222, 0);
         }
     }

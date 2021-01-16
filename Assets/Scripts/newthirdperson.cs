@@ -9,13 +9,13 @@ public class newthirdperson : MonoBehaviour
 {
 
     [SerializeField]
-    private float _moveSpeed = 5f;
+    private float _moveSpeed = 7f;
     [SerializeField]
     private float _gravity = 9.81f;
     [SerializeField]
-    private float _jumpSpeed = 3.5f;
+    private float _jumpSpeed = 4f;
     [SerializeField]
-    private float _doubleJumpMultiplier = 0.5f;
+    private float _doubleJumpMultiplier = 0.7f;
 
     private CharacterController _controller;
 
