@@ -9,11 +9,21 @@ public class NPC : MonoBehaviour
     public Dialog_Manager dialogManager;
     public List<string> npcConvo = new List<string>();
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            dialogManager.StopDialog();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             dialogManager.Start_Dialoge(npcName, npcConvo);
         }
+        
     }
+    
 }
