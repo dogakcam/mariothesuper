@@ -16,8 +16,8 @@ public class ScoreSystem : MonoBehaviour
     
     void Update()
     {
-        ScoreText.GetComponent<Text>().text = " Coin: " + theScore;
-        MoonText.GetComponent<Text>().text = " Moon: " + moonScore;
-        PurpCoinText.GetComponent<Text>().text = " Money: " + PurpCoinScore;
+        ScoreText.GetComponent<Text>().text = " : " + theScore;
+        MoonText.GetComponent<Text>().text = " : " + moonScore;
+        PurpCoinText.GetComponent<Text>().text = " : " + PurpCoinScore;
     }
 }
