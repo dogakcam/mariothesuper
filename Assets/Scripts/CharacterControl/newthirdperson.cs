@@ -61,10 +61,18 @@ public class newthirdperson : MonoBehaviour
             }
         }
 
+        if (_anim)
+        {
+            _anim.SetFloat("speed", direction.magnitude);
+        }
+       
+
         _directionY -= _gravity * Time.deltaTime;
 
         direction.y = _directionY;
 
         _controller.Move(direction * _moveSpeed * Time.deltaTime);
+        
+        
     }
 }
