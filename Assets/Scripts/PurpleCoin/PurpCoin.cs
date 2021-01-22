@@ -12,7 +12,7 @@ public class PurpCoin : MonoBehaviour
             Money += 1;
             Debug.Log("Something Touched me");
             ScoreSystem.PurpCoinScore = Money;
-
+            AudioManager.Instance.PlaySound(Sounds.PurpleCoin, transform.position);
             Destroy(other.gameObject); 
 
         }

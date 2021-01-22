@@ -12,7 +12,7 @@ public class Moon : MonoBehaviour
             moon += 1;
             Debug.Log("Something Touched me");
             ScoreSystem.moonScore = moon;
-
+            AudioManager.Instance.PlaySound(Sounds.Moon, transform.position);
             Destroy(other.gameObject); 
 
         }

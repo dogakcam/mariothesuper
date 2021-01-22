@@ -50,13 +50,11 @@ public class newthirdperson : MonoBehaviour
 
             }
         }
-        
-
-        
 
         if (_anim)
         {
             _anim.SetFloat("speed", direction.magnitude);
+            
         }
         if(_directionY > 0.5f)
         {
