@@ -58,6 +58,8 @@ public enum Sounds
     Moon,
     PurpleCoin,
     Button,
+    Dialogue,
+    Level_2_background,
 
 
 

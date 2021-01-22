@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mario.unity
     guid: 0cb5d44a4c963f145acdb0a0c95d9d1b
-  - enabled: 1
-    path: "Assets/Scenes/Ins\u0131de.unity"
-    guid: 66cf17e824b3a4500add5df270184999
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
