@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityStandardAssets.Cameras;
 
 public class Mind : MonoBehaviour
