@@ -25,10 +25,12 @@ public class MarioThrowingCap : MonoBehaviour
     [Header("Public bools")]
     public bool Spinning;
 
+    AudioManager audioManager;
     private void Start()
     {
         CapTrail.Stop();
         CapTrailRenderer.enabled = false;
+        audioManager = AudioManager.Instance;
 
     }
 
@@ -39,6 +41,7 @@ public class MarioThrowingCap : MonoBehaviour
         {
 
             ThrowingCap();
+            
             CapEffect.Play();
             Spinning = true;
         }
@@ -77,6 +80,8 @@ public class MarioThrowingCap : MonoBehaviour
         //Mario Spinning
         //throwSequence.Join(Mario.DORotate(new Vector3(0, 360f, 0), spinningDuration, RotateMode.FastBeyond360));
         CapTrail.Play();
+        audioManager.PlaySound(Sounds.CapThrow, transform.position);
+       
 
     }
 

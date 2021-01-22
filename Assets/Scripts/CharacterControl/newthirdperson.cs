@@ -15,13 +15,12 @@ public class newthirdperson : MonoBehaviour
     [SerializeField]
     private float _jumpSpeed = 4f;
     [SerializeField]
-    private float _doubleJumpMultiplier = 0.7f;
+    //private float _doubleJumpMultiplier = 0.7f;
 
     private CharacterController _controller;
 
     private float _directionY;
 
-    private bool _canDoubleJump = false;
 
     public Animator _anim;
       
@@ -42,30 +41,29 @@ public class newthirdperson : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
         Vector3 direction = transform.forward * verticalInput + transform.right * horizontalInput;
 
-
-        if (_controller.isGrounded)
+       
+        if(_controller.isGrounded)
         {
-            _canDoubleJump = true;
-
             if (Input.GetButtonDown("Jump"))
             {
                 _directionY = _jumpSpeed;
+
             }
         }
-        else
-        {
-            if (Input.GetButtonDown("Jump") && _canDoubleJump)
-            {
-                _directionY = _jumpSpeed * _doubleJumpMultiplier;
-                _canDoubleJump = false;
-            }
-        }
+        
+
+        
 
         if (_anim)
         {
             _anim.SetFloat("speed", direction.magnitude);
         }
-       
+        if(_directionY > 0.5f)
+        {
+            AudioManager.Instance.PlaySound(Sounds.Jump, transform.position);
+
+        }
+
 
         _directionY -= _gravity * Time.deltaTime;
 
@@ -75,4 +73,5 @@ public class newthirdperson : MonoBehaviour
         
         
     }
+  
 }

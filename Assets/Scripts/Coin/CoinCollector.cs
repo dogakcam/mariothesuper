@@ -14,7 +14,7 @@ public class CoinCollector : MonoBehaviour
 			coin += 1;
 			Debug.Log("Something Touched me");
 			ScoreSystem.theScore = coin;
-
+			AudioManager.Instance.PlaySound(Sounds.Coin,transform.position);
 			Destroy(other.gameObject); //Destroy Coin
 
 		}
